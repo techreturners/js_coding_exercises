@@ -7,6 +7,6 @@ Once again we have a selection of JavaScript challenges for you to work through.
 
 NB Take a look at previous instructions for how to only run individual test files, and individual tests.
 
-Once you have completed these challenges you can move onto the next ones: [Exercises 004 Documentation](./exercise004.md)
+Once you have completed these challenges you can move onto the next ones: [Exercises 004 - Docs](./exercise004.md)
 
 You're doing great! 🙌
