@@ -1,4 +1,4 @@
-# Challenges
+# Exercises 004
 
 These challenges are all around looping!
 
@@ -91,3 +91,5 @@ const newArr = arr.filter(function(item) {
 
 // newArr is your new filtered array
 ```
+
+Now you're a pro at ES6 loopy-de-loops, you're ready for: [Exercises 005 - Docs](./exercise005.md)!
