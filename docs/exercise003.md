@@ -1,4 +1,4 @@
-# Challenges 003
+# Challenges
 
 Once again we have a selection of JavaScript challenges for you to work through.
 
