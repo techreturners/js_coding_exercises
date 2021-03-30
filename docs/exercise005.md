@@ -1,4 +1,4 @@
-# Challenges
+# Exercises 005
 
 This time we've got a few more problem solving challenges for you to work through.
 
@@ -99,3 +99,9 @@ And with implicit return as well:
 ```javascript
 const isEven = a => a % 2 === 0;
 ```
+
+We <3 ES6 arrow functions and hope you do too! 
+
+Not many exercises left now. You're whizzing through these, great job. 
+
+See here for: [Exercises 006 - Docs](./exercise006.md)
