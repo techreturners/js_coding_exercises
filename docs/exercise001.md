@@ -12,3 +12,5 @@ This first set of challenges focus on the following skills:
 Make sure to add and commit every time you get something working!
 
 Push up to Github too, so we can see how you're getting on!
+
+Once you have completed this first set of challenges you can move onto the next ones: [Exercises 002 Documentation](docs/exercise002.md)
