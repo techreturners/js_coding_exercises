@@ -1,4 +1,4 @@
-# Challenges
+# Exercises 001
 
 This first set of challenges focus on the following skills:
 
