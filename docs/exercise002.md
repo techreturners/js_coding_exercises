@@ -1,4 +1,4 @@
-# Challenges
+# Exercises 002
 
 These challenges encourage you to keep on practicing your JavaScript skills!
 
