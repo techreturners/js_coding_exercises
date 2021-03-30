@@ -92,4 +92,4 @@ const newArr = arr.filter(function(item) {
 // newArr is your new filtered array
 ```
 
-Now you're a pro at ES6 loopy-de-loops, you're ready for: [Exercises 005 - Docs](./exercise005.md)!
+Now you're a pro at ES6 loop-de-loops, you're ready for: [Exercises 005 - Docs](./exercise005.md)!
