@@ -1,6 +1,6 @@
 # JavaScript Practice
 
-This repository contains challenges for you to undertake and build on your coding and technical ability. We will be checking over your solutions, so please ensure you push to GitHub regularly. 
+This repository contains 7 lots of exercises for you to undertake and build on your coding and technical ability. We will be checking over your solutions, so please ensure you push to GitHub regularly. 
 
 You may find these exercises challenging but they give you the opportunity to showcase your growth mindset and commitment to programming and learning in general. You can always come to us if you are having any trouble! 
 
@@ -34,13 +34,13 @@ Once you've got Node installed you can make a start - before you do please make 
 
 ### Completing the challenges
 
-When first cloning this repository, install its dependencies:
+After forking this repository (as shown in the video) you will need to then clone the repo locally and install its dependencies:
 
     npm install
 
 If you look inside the **challenges** directory you will find a file of functions to implement.
 
-To understand how these functions work, take a look in the corresponding test file where the desired functionality is described.
+To understand how these functions work, take a look in the corresponding test file where the desired functionality is described and reading the accompanying "docs" provided. The doc files include handy tips and information to expand your learning.
 
 To run the tests, run
 
