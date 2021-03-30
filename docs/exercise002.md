@@ -16,3 +16,5 @@ These challenges encourage you to keep on practicing your JavaScript skills!
 ```
 
 Remember to change it back afterwards so it's running all the tests again!
+
+Once you have completed this first set of challenges you can move onto the next ones: [Exercises 003 Documentation](./exercise003.md)
