@@ -6,3 +6,5 @@ Once again we have a selection of JavaScript challenges for you to work through.
 2. Work through the challenges in the `challenges/exercise003.js` file, adding and committing your work as you go.
 
 NB Take a look at previous instructions for how to only run individual test files, and individual tests.
+
+Once you have completed this first set of challenges you can move onto the next ones: [Exercises 003 Documentation](./exercise003.md)
