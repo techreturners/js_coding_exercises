@@ -1,5 +1,7 @@
 # Exercises 007
 
+Well done for getting this far! 🎉
+
 Once again, we'd like you to write your own unit tests.
 
 Remember, there is a video on Unit Testing available here:
@@ -8,10 +10,8 @@ Remember, there is a video on Unit Testing available here:
 
 Work through the exercises in a TDD (Test Driven Development) approach of Red -> Green -> Refactor
 
-Finished? Well done! 
+In these exercises you have covered forLoops, ES6 methods like .map() and .forEach(), eslint, Test Driven Development and more! 
 
-You have covered forLoops, ES6 methods, eslint, TDD and much more! 
-
-Great job, we hope you found these exercises fun and look forward to seeing you soon. 
+Great work, we hope you found these exercises fun and look forward to seeing you soon. 🙌
 
  
