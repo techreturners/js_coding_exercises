@@ -102,6 +102,4 @@ const isEven = a => a % 2 === 0;
 
 We love ES6 arrow functions and hope you do too! 
 
-Not many exercises left now... keep up the hard work.
-
 See here for: [Exercises 006 - Docs](./exercise006.md)
