@@ -2,7 +2,7 @@
 
 This repository contains 7 lots of exercises for you to undertake and build on your coding and technical ability. We will be checking over your solutions, so please ensure you push to GitHub regularly. 
 
-You may find these exercises challenging but they give you the opportunity to showcase your growth mindset and commitment to programming and learning in general. You can always come to us if you are having any trouble! 
+You may find these exercises challenging but they give you the opportunity to showcase your Growth Mindset and commitment to programming and learning in general. You can always come to us if you are having any trouble! 
 
 We will be covering Javascript on the Your Return to Tech course, so it's really important your problem solving skills are fresh. 
 
@@ -40,7 +40,7 @@ After forking this repository (as shown in the video) you will need to then clon
 
 If you look inside the **challenges** directory you will find a file of functions to implement.
 
-To understand how these functions work, take a look in the corresponding test file where the desired functionality is described and reading the accompanying "docs" provided. The doc files include handy tips and information to expand your learning.
+To understand how these functions work, take a look in the corresponding test file where the desired functionality is described and read the accompanying "docs" provided. The doc files include handy tips and information to expand your learning.
 
 To run the tests, run
 
@@ -90,7 +90,7 @@ To run **ONE** test file at a time you can enter into the terminal npm test foll
 
 ### Edge cases
 
-We have provided basic tests for each function - but can you think of any more tests which would help make sure that these functions behave correctly?
+We have provided basic tests for each function - but can you think of any more tests which would help make sure these functions behave correctly?
 
 Think about **edge cases**, which are use cases for your function which you might not ordinarily expect, but which you need to handle regardless.
 
