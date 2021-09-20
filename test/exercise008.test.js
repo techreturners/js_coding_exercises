@@ -1,7 +1,8 @@
 const {
     printColours,
     shoppingList,
-    highestNumber
+    highestNumber,
+    splitThatString
 } = require("../challenges/exercise008");
 
 
@@ -11,7 +12,6 @@ describe("colours", () => {
         expect(printColours(colours)).toEqual(colours);
     });
 });
-
 
 describe("shoppingList", () => {
     test("returns a list with an extra item", () => {
@@ -27,10 +27,30 @@ describe("shoppingList", () => {
     });
 });
 
-
 describe("highestNumber", () => {
     test("returns the highest number", () => {
         const numbers = [12, 20, 18];
         expect(highestNumber(numbers)).toEqual(20);
     });
 });
+
+describe("splitThatString", () => {
+    test("returns a string split up", () => {
+        const string = "USA";
+        expect(splitThatString(string)).toEqual(["U", "S", "A"]);
+    });
+    test("returns a string split up", () => {
+        const string = "123";
+        expect(splitThatString(string)).toEqual(["1", "2", "3"]);
+    });
+    test("returns an empty array if string isn't provided", () => {
+        const string = "";
+        expect(splitThatString(string)).toEqual([]);
+    });
+});
+
+
+
+// Optional Chaining 
+
+

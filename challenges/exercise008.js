@@ -15,8 +15,13 @@ function shoppingList(list, newItem){
 function highestNumber(numbers){
     if (!numbers) throw new Error("numbers are required");
     // Your solution using the spread operator here!
-    var maxPrice = Math.max(...numbers);
+    const maxPrice = Math.max(...numbers);
     return maxPrice
+}
+
+function splitThatString(string){
+    // Your solution using the spread operator here!
+    return [...string]
 }
 
 
@@ -28,5 +33,6 @@ function highestNumber(numbers){
 module.exports = {
     printColours,
     shoppingList,
-    highestNumber
+    highestNumber,
+    splitThatString
   };
