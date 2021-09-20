@@ -20,6 +20,7 @@ function highestNumber(numbers){
 }
 
 function splitThatString(string){
+    if (!string) throw new Error("string is required");
     // Your solution using the spread operator here!
     return [...string]
 }
@@ -27,12 +28,17 @@ function splitThatString(string){
 
 // Optional Chaining Bonus activity
 
-
+function addressLookUp(user){
+    if (!user) throw new Error("user is required");
+    // Your solution using optional chaining here!
+    return user.address?.postcode;
+}
 
 
 module.exports = {
     printColours,
     shoppingList,
     highestNumber,
-    splitThatString
-  };
+    splitThatString,
+    addressLookUp
+};

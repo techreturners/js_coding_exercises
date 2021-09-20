@@ -2,7 +2,8 @@ const {
     printColours,
     shoppingList,
     highestNumber,
-    splitThatString
+    splitThatString,
+    addressLookUp
 } = require("../challenges/exercise008");
 
 
@@ -20,7 +21,7 @@ describe("shoppingList", () => {
         expect(shoppingList(list, newItem)).toEqual(["one apple", "two dozen organic eggs", "cucumber", "bread", "earl grey tea"]);
     });
 
-    test("returns an empty list with extra items", () => {
+    test("returns an empty list with new items added to it", () => {
         const list = [];
         const newItem = ["jelly", "melon", "pear"]
         expect(shoppingList(list, newItem)).toEqual(["jelly", "melon", "pear"]);
@@ -43,14 +44,42 @@ describe("splitThatString", () => {
         const string = "123";
         expect(splitThatString(string)).toEqual(["1", "2", "3"]);
     });
-    test("returns an empty array if string isn't provided", () => {
-        const string = "";
-        expect(splitThatString(string)).toEqual([]);
-    });
 });
 
 
 
 // Optional Chaining 
 
+describe("addressLookUp", () => {
+    test("returns a users postcode", () => {
 
+        const user = {
+            name: 'JimBob Eggs',
+            telephone: 666,
+            likes: 'cheese',
+            dislikes: 'dirty socks',
+            address: {
+                houseNumber: 'The Number of the Beast',
+                postcode: 'H12 333'
+            }
+        }
+        expect(addressLookUp(user)).toEqual('H12 333');
+    });
+    test("returns undefined if address isn't provided", () => {
+
+        const user = {
+            name: 'JimBob Eggs',
+            telephone: 666,
+            likes: 'cheese',
+            dislikes: 'dirty socks',
+        }
+        expect(addressLookUp(user)).toEqual(undefined);
+    });
+    test("returns undefined if a user isn't provided", () => {
+
+        const melon = {
+            name: 'honeydew'
+        }
+        expect(addressLookUp(melon)).toEqual(undefined);
+    });
+});

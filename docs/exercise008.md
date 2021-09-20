@@ -27,7 +27,9 @@ You may have solved it using this method already - in which case, great job! �
 
 When working with objects in JavaScript we often want to access certain properties of an object to, for example, display different or conditional information on a webpage. 
 
-However, sometimes there are situations where we don't know whether certain data exists yet (like when calling an external API) or where data not existing or being 'null' is normal. If we try and access non-existent properties on an object though, JavaScript throws an error!
+However, sometimes there are situations where we don't know whether certain data exists (like when calling an external API) or where data not existing or being 'null' is normal. If we try and access non-existent properties on an object when an intermediate property does not exist, JavaScript throws an error!
+
+For example, if we have some users, and we try to access their postcodes but - oh oh! They haven't provided addresses, JavaScript errors.
 
 ````
 let user = {}; // a user without "address" property
@@ -35,19 +37,23 @@ let user = {}; // a user without "address" property
 alert(user.address.postcode); // Throws Error! 
 ````
 
+Note: if you simply tried to access user.address and the user doesn't have an address, JavaScript returns undefined. JavaScript only throws an error if an intermediate property isn't there i.e. address if you're trying to access postcode. 
+
 There are many ways of getting around this such as conditionally checking a property exists before trying to access it, such as:
 
 ```
 alert(user.address !== undefined ? user.address.postcode : null)
 ```
 
-These workarounds can get messy and confusing though, especially if you have something deeply nested. A more elegant solution is ✨Optional Chaining✨:
+These workarounds can get messy and confusing though, especially if you have something deeply nested ⫸
+
+A more elegant solution is ✨Optional Chaining✨:
 
 ```
 alert(user?.address?.postcode); // undefined (no error)
 ```
 
-The above code checks user exists (is not null or undefined). If user *does* exist it moves on and checks address exists. If address exists it will try and return postcode. If anywhere in this chain is undefined or null, the operation exits or "short-circuits" with undefined.
+The above code checks user exists (is not null or undefined). If user *does* exist it moves on and checks address exists. If address exists it will try and return postcode. If anywhere in this chain is undefined or null (a broken chain! ⛓), the operation exits or "short-circuits" with undefined.
 
 This method can also be used to check for functions or properties, where a function or property may not exist. For example:
 
@@ -59,7 +65,7 @@ let catUser = {
   }
 };
 
-let dogGuest = {};
+let dogUser = {};
 
 catUser.sayMeow?.(); // Meow!
 
@@ -68,8 +74,10 @@ dogUser.sayMeow?.(); // nothing (method doesn't exist)
 
 catUser.miceEaten?.[]; // 5
 
-dogUser.miceEaten?.[]; // undefined (dogs don't eat mice! 🐭)
+dogUser.miceEaten?.[]; // undefined (dogs don't eat mice, silly! 🐭)
 ```
 
 
-1.1) Work through the Exercises008 using ✨Optional chaining✨
+1.1) Work through Exercises 008 using ✨Optional chaining✨
+
+When it comes to working with React you will find spread syntax, optional chaining and methods like .map() and .filter() help a lot. We hope you enjoyed these exercises. Happy coding! 
