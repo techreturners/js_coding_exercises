@@ -4,7 +4,7 @@ const {
     highestNumber,
     splitThatString,
     addressLookUp
-} = require("../challenges/exercise008");
+} = require("../challenges/exercise008-bonus-activity");
 
 
 describe("colours", () => {
@@ -47,7 +47,6 @@ describe("splitThatString", () => {
 });
 
 
-
 // Optional Chaining 
 
 describe("addressLookUp", () => {
@@ -74,12 +73,5 @@ describe("addressLookUp", () => {
             dislikes: 'dirty socks',
         }
         expect(addressLookUp(user)).toEqual(undefined);
-    });
-    test("returns undefined if a user isn't provided", () => {
-
-        const melon = {
-            name: 'honeydew'
-        }
-        expect(addressLookUp(melon)).toEqual(undefined);
     });
 });
