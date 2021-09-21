@@ -6,6 +6,7 @@ function printColours(colours){
 }
 
 function shoppingList(list, newItem){
+    if (!list) throw new Error("list is required");
     if (!newItem) throw new Error("newItem is required");
     // Your solution using the spread operator here!
 }
@@ -21,7 +22,7 @@ function splitThatString(string){
 }
 
 
-// Optional Chaining Bonus activity
+// Optional Chaining Bonus activity!
 
 function addressLookUp(user){
     if (!user) throw new Error("user is required");

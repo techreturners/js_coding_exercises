@@ -14,6 +14,6 @@ In these exercises you have covered forLoops, ES6 methods like .map() and .forEa
 
 Great work, we hope you found these exercises fun and look forward to seeing you soon. 🙌
 
-See Exercise008 for an optional Bonus activity! 
+See [Exercise008](./exercise008-bonus-activity.md) for an optional Bonus activity! 
 
  

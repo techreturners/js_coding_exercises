@@ -11,7 +11,7 @@ You have covered so many different JavaScript concepts and skills in a very shor
 - Objects
 and more!
 
-In these exercise we would like you to take a look at two new features of ES6, the Spread Operator and Optional Chaining.
+In these exercises we would like you to try some of the very latest JavaScript and have a go with Optional Chaining!
 
 # Task 1: The Spread Operator
 
@@ -27,9 +27,9 @@ You may have solved it using this method already - in which case, great job! �
 
 When working with objects in JavaScript we often want to access certain properties of an object to, for example, display different or conditional information on a webpage. 
 
-However, sometimes there are situations where we don't know whether certain data exists (like when calling an external API) or where data not existing or being 'null' is normal. If we try and access non-existent properties on an object when an intermediate property does not exist, JavaScript throws an error!
+However, sometimes there are situations where we don't know whether certain data exists (like when calling an external API) or where data not existing or being 'null' is normal/expected. If we try and access non-existent properties on an object when an intermediate property does not exist, JavaScript throws an error!
 
-For example, if we have some users, and we try to access their postcodes but - oh oh! They haven't provided addresses, JavaScript errors.
+For example, if we have some users, and we try to access their postcodes but - oh oh! They haven't provided addresses, JavaScript throws an error.
 
 ````
 let user = {}; // a user without "address" property
@@ -37,7 +37,7 @@ let user = {}; // a user without "address" property
 alert(user.address.postcode); // Throws Error! 
 ````
 
-Note: if you simply tried to access user.address and the user doesn't have an address, JavaScript returns undefined. JavaScript only throws an error if an intermediate property isn't there i.e. address if you're trying to access postcode. 
+Note: if you simply tried to access user.address and the user doesn't have an address, JavaScript returns undefined. JavaScript only throws an error if an intermediate property isn't there (in the above solution, `address` is the intermediate property)
 
 There are many ways of getting around this such as conditionally checking a property exists before trying to access it, such as:
 
@@ -80,4 +80,4 @@ dogUser.miceEaten?.[]; // undefined (dogs don't eat mice, silly! 🐭)
 
 1.1) Work through Exercises 008 using ✨Optional chaining✨
 
-When it comes to working with React you will find spread syntax, optional chaining and methods like .map() and .filter() help a lot. We hope you enjoyed these exercises. Happy coding! 
+When it comes to working with React you will find Spread Syntax, Optional Chaining and methods like .map() and .filter() help a lot. We hope you enjoyed these exercises. Happy coding! 
