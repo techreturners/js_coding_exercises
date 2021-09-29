@@ -56,12 +56,22 @@ function getSalePrice(originalPrice, reduction) {
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  // Add your code here!
+  let strCount = str.length;
+  let strCountDivide = str.length/2;
+  if(parseInt(strCount)%2!=0){
+    return str.charAt(strCountDivide);
+  }else{
+    return str.substring(strCountDivide-1,strCountDivide+1);
+  }
 }
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  let reverseWord = '';
+  for(let i=word.length-1;i>=0;i--){
+    reverseWord = reverseWord.concat(word.charAt(i));
+  }
+  return reverseWord;
 }
 
 function reverseAllWords(words) {
