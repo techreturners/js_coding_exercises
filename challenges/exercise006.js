@@ -4,8 +4,8 @@
  * @param {Array} arr
  * @returns {Number}
  */
-const sumMultiples = arr => {
-  if (arr === undefined) throw new Error("arr is required");
+const sumMultiples = (arr) => {
+	if (arr === undefined) throw new Error('arr is required');
 };
 
 /**
@@ -13,8 +13,8 @@ const sumMultiples = arr => {
  * @param {String} str
  * @returns {Boolean}
  */
-const isValidDNA = str => {
-  if (str === undefined) throw new Error("str is required");
+const isValidDNA = (str) => {
+	if (str === undefined) throw new Error('str is required');
 };
 
 /**
@@ -22,8 +22,8 @@ const isValidDNA = str => {
  * @param {String} str
  * @returns {String}
  */
-const getComplementaryDNA = str => {
-  if (str === undefined) throw new Error("str is required");
+const getComplementaryDNA = (str) => {
+	if (str === undefined) throw new Error('str is required');
 };
 
 /**
@@ -31,8 +31,8 @@ const getComplementaryDNA = str => {
  * @param {Number} n
  * @returns {Boolean}
  */
-const isItPrime = n => {
-  if (n === undefined) throw new Error("n is required");
+const isItPrime = (n) => {
+	if (n === undefined) throw new Error('n is required');
 };
 
 /**
@@ -47,8 +47,8 @@ const isItPrime = n => {
  * @returns {Array}
  */
 const createMatrix = (n, fill) => {
-  if (n === undefined) throw new Error("n is required");
-  if (fill === undefined) throw new Error("fill is required");
+	if (n === undefined) throw new Error('n is required');
+	if (fill === undefined) throw new Error('fill is required');
 };
 
 /**
@@ -64,15 +64,15 @@ const createMatrix = (n, fill) => {
  * @returns {Boolean}
  */
 const areWeCovered = (staff, day) => {
-  if (staff === undefined) throw new Error("staff is required");
-  if (day === undefined) throw new Error("day is required");
+	if (staff === undefined) throw new Error('staff is required');
+	if (day === undefined) throw new Error('day is required');
 };
 
 module.exports = {
-  sumMultiples,
-  isValidDNA,
-  getComplementaryDNA,
-  isItPrime,
-  createMatrix,
-  areWeCovered
+	sumMultiples,
+	isValidDNA,
+	getComplementaryDNA,
+	isItPrime,
+	createMatrix,
+	areWeCovered,
 };
