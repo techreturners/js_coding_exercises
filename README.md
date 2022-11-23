@@ -1,8 +1,8 @@
-# JavaScript Practice
+# ✨ JavaScript Practice ✨
 
 This repository contains 8 sets of exercises for you to undertake, helping you to build on your coding and technical ability. We will be checking over your solutions, so please ensure you push to GitHub regularly.
 
-You may find these exercises challenging but they give you the opportunity to showcase your Growth Mindset and commitment to programming and learning in general. You can always come to us if you are having any trouble!
+You may find these exercises challenging but they give you the opportunity to showcase your Growth Mindset and commitment to programming and learning in general. You can always come to us if you are having any trouble! 😊
 
 We will be covering Javascript on the Your Return to Tech course, so it's really important your problem solving skills are fresh.
 
@@ -14,7 +14,7 @@ We also recommend this visual guide if you are unfamiliar with GitHub: https://a
 
 Remember to break down problems to help you solve them and that Google is your friend!
 
-### Instructions
+### 🗺 Instructions 🗺
 
 To complete these challenges you will need to have Node.js installed on your computer. Follow this link and click on the green button to install for Mac or Windows: https://nodejs.org/en/download/
 
@@ -26,13 +26,13 @@ To check you have installed Node.js correctly, go to your terminal and type:
 
 Your terminal should respond with the version of Node you have installed. It will look something similar to the following (dont worry if its not the exact same version):
 
-    v14.5.0
+    v18.12.1
 
 Once you've got Node installed you can make a start - before you do please make sure to watch the [getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4) as it walks you through instructions for getting started and the first exercise.
 
 #### [Getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4)
 
-### Completing the challenges
+### 💻 Completing the challenges 💻
 
 After forking this repository (as shown in the video) you will need to then clone the repo locally and install its dependencies:
 
@@ -49,18 +49,18 @@ To run the tests, run
 Work through each test 1 by 1 until you have them all passing. Initially, you'll have a lot of failing tests and a lot of output on the console. To focus on a single test, add `.only` to the test you are interested in:
 
 ```javascript
-describe('capitalize', () => {
-	test.only('returns a capitalized word', () => {
-		expect(capitalize('hello')).toBe('Hello');
-	});
+describe("capitalize", () => {
+  test.only("returns a capitalized word", () => {
+    expect(capitalize("hello")).toBe("Hello");
+  });
 
-	test('does nothing if the word is already capitalized', () => {
-		expect(capitalize('Hello')).toBe('Hello');
-	});
+  test("does nothing if the word is already capitalized", () => {
+    expect(capitalize("Hello")).toBe("Hello");
+  });
 
-	test('capitalizes the first word of a sentence', () => {
-		expect(capitalize('the quick fox')).toBe('The quick fox');
-	});
+  test("capitalizes the first word of a sentence", () => {
+    expect(capitalize("the quick fox")).toBe("The quick fox");
+  });
 });
 ```
 
@@ -69,18 +69,18 @@ Don't forget to remove it afterwards so you can run all your tests again.
 You can also ignore tests momentarily by adding an `x` at the front:
 
 ```javascript
-xdescribe('capitalize', () => {
-	test('returns a capitalized word', () => {
-		expect(capitalize('hello')).toBe('Hello');
-	});
+xdescribe("capitalize", () => {
+  test("returns a capitalized word", () => {
+    expect(capitalize("hello")).toBe("Hello");
+  });
 
-	test('does nothing if the word is already capitalized', () => {
-		expect(capitalize('Hello')).toBe('Hello');
-	});
+  test("does nothing if the word is already capitalized", () => {
+    expect(capitalize("Hello")).toBe("Hello");
+  });
 
-	test('capitalizes the first word of a sentence', () => {
-		expect(capitalize('the quick fox')).toBe('The quick fox');
-	});
+  test("capitalizes the first word of a sentence", () => {
+    expect(capitalize("the quick fox")).toBe("The quick fox");
+  });
 });
 ```
 
@@ -90,9 +90,9 @@ To run **ONE** test file at a time you can enter into the terminal npm test foll
 
 But make sure when you push remotely to github that you have re-enabled all the test files!
 
-### Edge cases
+### 🔎 Edge cases 🔎
 
-We have provided basic tests for each function - but can you think of any more tests which would help make sure these functions behave correctly?
+We have provided basic tests for each function - but can you think of any more tests which would help make sure these functions behave correctly? 🧐
 
 Think about **edge cases**, which are use cases for your function which you might not ordinarily expect, but which you need to handle regardless.
 
@@ -112,7 +112,7 @@ What if the string contains no characters?
 
 `capitalize("") --> ""`
 
-### Linting
+### 🧹 Linting 🧹
 
 To help you write "clean", tidy code, we've included Linting with [EsLint](https://eslint.org/) in this repository.
 
@@ -130,6 +130,6 @@ To check all linting errors, run:
 
 You should fix any errors before adding and commiting your code.
 
-# The challenges
+# 🔥 The challenges 🔥
 
-Open [the first challenge instructions](docs/exercise001.md) to get started!
+Open [the first challenge instructions](docs/exercise001.md) to get started! 🙌

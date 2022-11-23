@@ -1,16 +1,22 @@
 # Exercises 004
 
-These challenges are all around looping!
+These challenges are all around looping! ↬
 
 We have added a number of challenges for you to complete and we hope that by the end you will feel very confident with loops, if you don't already.
 
 1. Remind yourself of how a for loop works, and how it can be used to access items in an array or characters in a string. If you need a reminder of the syntax, take a look at [this repl project](https://replit.com/@eggsy84/UniformAdmiredPolyhedron#index.js).
+
 2. Solve all the challenges using a for loop and make a commit when you are done. (You can make commits along the way too but make sure they signal that you are solving the challenges with a for loop)
+
 3. Revisit each challenge and replace the for loop with `.forEach`. For a reminder of the syntax of `forEach`, take a look at [this repl project](https://replit.com/@eggsy84/SuperiorDifferentLicenses#index.js) and read it through line by line, ensuring you understand the code's behaviour.
+
 4. Remind yourself how `.filter` and `.map` work. Take a look at [this repl project](https://replit.com/@eggsy84/InsidiousNuttyHertz#index.js) for examples.
+
 5. Take another look over your functions. Can you identify which functions could use `map` or `filter` instead of `forEach`? Are any functions **transformations** and are any functions **filtering** out items from an array? If so, refactor each function to use the appropriate choice of map/filter and commit your changes.
 
 NB For these challenges you may also find the [Solving SquareNums 3 Ways Video](https://storage.googleapis.com/tech-returners-course/JavaScript_Challenges/JS_challenges_week3_squarenums_3ways.mp4) from the previous challenges useful, where we demonstrate solving a problem using a for loop, refactoring it to use `.forEach`, and then again to use `.map`.
+
+💡 Note: You may notice slight code differences between these challenges and the ones in the video like the use of `module.exports = {}`. This is just an older way of exporting modules in node. These challenges now use ECMAScript Modules `import/export` syntax which are now the official standard for packaging code for reuse in both client- and server-side JavaScript.
 
 ## Cheatsheet
 
@@ -40,7 +46,7 @@ Basic Syntax:
 ```javascript
 const arr = ["foo", "bar", "baz"];
 
-arr.forEach(function(item) {
+arr.forEach(function (item) {
   // do something with item
 });
 ```
@@ -59,7 +65,7 @@ Basic Syntax:
 ```javascript
 const arr = ["foo", "bar", "baz"];
 
-const newArr = arr.map(function(item) {
+const newArr = arr.map(function (item) {
   // do something with item e.g.
   return item.charAt(0);
 });
@@ -80,7 +86,7 @@ Basic Syntax:
 ```javascript
 const arr = ["foo", "bar", "bazzzz"];
 
-const newArr = arr.filter(function(item) {
+const newArr = arr.filter(function (item) {
   // do something with item e.g.
   if (item.length > 3) {
     return true;
@@ -92,4 +98,4 @@ const newArr = arr.filter(function(item) {
 // newArr is your new filtered array
 ```
 
-Now you're a pro at ES6 loop-de-loops, you're ready for: [Exercises 005 - Docs](./exercise005.md)!
+Now you're a pro at ES6 loop-de-loops, 💪 you're ready for: [Exercises 005 - Docs](./exercise005.md)!
