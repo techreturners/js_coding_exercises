@@ -36,29 +36,9 @@ const add = (a, b) => {
 add(10, 9);
 ```
 
-There are small differences between an arrow function and a normal function. For example in a normal function you can use a special variable, `arguments` inside the function to list all the arguments the function received:
+There are small differences between an arrow function and a normal function. For example in a normal function you can use a special variable, `arguments` inside the function to list all the arguments the function received.
 
-```javascript
-function add(a, b) {
-  console.log(arguments); // logs 10 and 9
-  return a + b;
-}
-
-add(10, 9);
-```
-
-But you can't do that in an arrow function!
-
-```javascript
-const add = (a, b) => {
-  console.log(arguments); // ReferenceError, arguments is undefined!
-  return a + b;
-};
-
-add(10, 9);
-```
-
-There also some differences around the keyword `this` which we don't need to go into at the moment.
+There also some differences around the keyword `this` too, which we don't need to go into at the moment.
 
 #### Inplicit Return
 
