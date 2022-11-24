@@ -14,7 +14,7 @@ We also recommend this visual guide if you are unfamiliar with GitHub: https://a
 
 Remember to break down problems to help you solve them and that Google is your friend!
 
-### 🗺 Instructions 🗺
+### 🗺 Instructions
 
 To complete these challenges you will need to have Node.js installed on your computer. Follow this link and click on the green button to install for Mac or Windows: https://nodejs.org/en/download/
 
@@ -90,7 +90,7 @@ To run **ONE** test file at a time you can enter into the terminal npm test foll
 
 But make sure when you push remotely to github that you have re-enabled all the test files!
 
-### 🔎 Edge cases 🔎
+### 🔎 Edge cases
 
 We have provided basic tests for each function - but can you think of any more tests which would help make sure these functions behave correctly? 🧐
 
@@ -112,7 +112,7 @@ What if the string contains no characters?
 
 `capitalize("") --> ""`
 
-### 🧹 Linting 🧹
+### 🧹 Linting
 
 To help you write "clean", tidy code, we've included Linting with [EsLint](https://eslint.org/) in this repository.
 
