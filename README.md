@@ -32,7 +32,7 @@ Once you've got Node installed you can make a start - before you do please make 
 
 #### [Getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4)
 
-### 💻 Completing the challenges 💻
+### 💻 Completing the challenges 
 
 After forking this repository (as shown in the video) you will need to then clone the repo locally and install its dependencies:
 
