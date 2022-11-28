@@ -22,7 +22,15 @@ export function generateInitials(firstName, lastName) {
 export function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  // Add your code here!
+  
+  if (vatRate > 0) {
+    let newRate = vatRate / 100;
+    let vatAdded = originalPrice + (originalPrice * newRate);
+
+    return Math.round( vatAdded * 1e2 ) / 1e2;
+  } else {
+    return originalPrice;
+  }
 }
 
 export function getSalePrice(originalPrice, reduction) {
