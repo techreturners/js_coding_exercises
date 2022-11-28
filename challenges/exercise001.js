@@ -97,10 +97,22 @@ export function getMeanScore(scores) {
 
   const mean = meanScore / scores.length;
   return Math.round( mean * 1e2 ) / 1e2;
-
 }
 
 export function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
+
+  if ((n % 3) === 0 && (n % 5) === 0) {
+    return 'fizzbuzz';
+  }
+
+  if ((n % 3) === 0 && n % 5 !== 0) {
+    return 'fizz';
+  }
+
+  if ((n % 5) === 0 && n % 3 !== 0) {
+    return 'buzz';
+  }
+
+  return n;
 }
