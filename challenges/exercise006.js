@@ -6,6 +6,10 @@
  */
 export const sumMultiples = (arr) => {
   if (arr === undefined) throw new Error("arr is required");
+  const multiples = arr
+    .filter((num) => num % 3 === 0 || num % 5 === 0)
+    .reduce((prev, curr) => prev + curr, 0);
+  return multiples;
 };
 
 /**
@@ -15,6 +19,8 @@ export const sumMultiples = (arr) => {
  */
 export const isValidDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  const regex = /[^ACTG]/gi;
+  return str.match(regex) === null;
 };
 
 /**
@@ -24,6 +30,9 @@ export const isValidDNA = (str) => {
  */
 export const getComplementaryDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  let newStr = str.replace(/[AT]/gi, (e) => (e === "A" ? "T" : "A"));
+  newStr = newStr.replace(/[CG]/gi, (e) => (e === "C" ? "G" : "C"));
+  return newStr;
 };
 
 /**
@@ -33,6 +42,13 @@ export const getComplementaryDNA = (str) => {
  */
 export const isItPrime = (n) => {
   if (n === undefined) throw new Error("n is required");
+  const primeNums = [2, 3, 5, 7];
+  const primeNumArr = primeNums.filter((e) => n === e);
+  const isPrime =
+    primeNumArr.length === 0
+      ? n !== 1 && n % 2 !== 0 && n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0
+      : true;
+  return isPrime;
 };
 
 /**
@@ -49,6 +65,15 @@ export const isItPrime = (n) => {
 export const createMatrix = (n, fill) => {
   if (n === undefined) throw new Error("n is required");
   if (fill === undefined) throw new Error("fill is required");
+  let listArr = [];
+  let arr = [];
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      arr[j] = fill;
+    }
+    listArr[i] = arr;
+  }
+  return listArr;
 };
 
 /**
@@ -66,4 +91,9 @@ export const createMatrix = (n, fill) => {
 export const areWeCovered = (staff, day) => {
   if (staff === undefined) throw new Error("staff is required");
   if (day === undefined) throw new Error("day is required");
+  let count = 0;
+  staff.forEach((obj) => {
+    if (obj.rota.includes(day)) count++;
+  });
+  return count >= 3;
 };
