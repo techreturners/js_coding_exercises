@@ -4,6 +4,11 @@
  */
 export const sumDigits = (n) => {
   if (n === undefined) throw new Error("n is required");
+  const sum = n
+    .toString()
+    .split("")
+    .reduce((prev, curr) => +prev + +curr, 0);
+  return sum;
 };
 
 /**
@@ -14,13 +19,18 @@ export const sumDigits = (n) => {
  * @param {Number} end
  * @param {Number} step
  */
-export const createRange = (start, end, step) => {
+export const createRange = (start, end, step = 1) => {
   if (start === undefined) throw new Error("start is required");
   if (end === undefined) throw new Error("end is required");
   if (step === undefined)
     console.log(
       "FYI: Optional step parameter not provided. Remove this check once you've handled the optional step!"
     );
+  const arr = [];
+  for (let i = start; i <= end; i += step) {
+    arr.push(i);
+  }
+  return arr;
 };
 
 /**
@@ -52,9 +62,28 @@ export const createRange = (start, end, step) => {
  * For example, if passed the above users and the date "2019-05-04" the function should return ["beth_1234"] as she used over 100 minutes of screentime on that date.
  * @param {Array} users
  */
-export const getScreentimeAlertList = (users, date) => {
+export const getScreentimeAlertList = (users, dat) => {
   if (users === undefined) throw new Error("users is required");
-  if (date === undefined) throw new Error("date is required");
+  if (dat === undefined) throw new Error("date is required");
+
+  // Check the most usage
+  const userMostUsageArr = users
+    .filter((user) => {
+      const { screenTime } = user;
+      let tot = 0;
+      screenTime.forEach((e) => {
+        const { date, usage } = e;
+        if (date === dat) {
+          for (let key in usage) {
+            tot += +usage[key];
+          }
+        }
+      });
+      return tot > 100;
+    })
+    .map((user) => user.username);
+  // console.log(userMostUsageArr);
+  return userMostUsageArr;
 };
 
 /**
@@ -69,6 +98,7 @@ export const getScreentimeAlertList = (users, date) => {
  */
 export const hexToRGB = (hexStr) => {
   if (hexStr === undefined) throw new Error("hexStr is required");
+  
 };
 
 /**
