@@ -2,14 +2,14 @@
 
 export function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  let newWord = word.charAt(0).toUpperCase() + word.substring(1);
+  const newWord = word.charAt(0).toUpperCase() + word.substring(1);
   return newWord;
 }
 
 export function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  let initial =
+  const initial =
     firstName.charAt(0).toUpperCase() + "." + lastName.charAt(0).toUpperCase();
   return initial;
 }
@@ -17,34 +17,34 @@ export function generateInitials(firstName, lastName) {
 export function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  let vat = (+vatRate /100) * +originalPrice
+  const vat = (+vatRate /100) * +originalPrice
   return +(+originalPrice + vat).toFixed(2);
 }
 
 export function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
-  let reducedPrice = (+reduction/100) * +originalPrice;
+  const reducedPrice = (+reduction/100) * +originalPrice;
   return +(+originalPrice - reducedPrice).toFixed(2);
 }
 
 export function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  let strLen = str.length;
+  const strLen = str.length;
 
-  let middleChar = strLen%2 >0 ?  str.charAt(Math.ceil(strLen/2)-1): str.charAt((strLen/2)-1) + str.charAt(strLen/2);
+  const middleChar = strLen%2 >0 ?  str.charAt(Math.ceil(strLen/2)-1): str.charAt((strLen/2)-1) + str.charAt(strLen/2);
   return middleChar;
 }
 
 export function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  let newWord = word.split('').reverse().join('');
+  const newWord = word.split('').reverse().join('');
   return newWord;
 }
 
 export function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  let reversed = words.map(w=>w.split('').reverse().join(''));
+  const reversed = words.map(w=>w.split('').reverse().join(''));
   return reversed;
 }
 

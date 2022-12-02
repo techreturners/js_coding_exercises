@@ -98,7 +98,13 @@ export const getScreentimeAlertList = (users, dat) => {
  */
 export const hexToRGB = (hexStr) => {
   if (hexStr === undefined) throw new Error("hexStr is required");
-  
+  const hexToRgb = hexStr
+    .replace("#", "")
+    .match(/.{2}/g)
+    .map((e) => parseInt(e, 16))
+    .join(",");
+
+  return `rgb(${hexToRgb})`;
 };
 
 /**
@@ -113,4 +119,62 @@ export const hexToRGB = (hexStr) => {
  */
 export const findWinner = (board) => {
   if (board === undefined) throw new Error("board is required");
+  let winner;
+  let colOne = [];
+  let colTwo = [];
+  let colThree = [];
+  let diagOne = [];
+  let diagTwo = [];
+
+  // //Check if player is a winner
+  const isPlayerWinner = (playerPos) => {
+    return playerPos.every((e, i, arr) => e === arr[0]);
+  };
+
+  //get column positions of player
+  const getCol = (col, colNum) => {
+    if (colNum === 0) colOne.push(col);
+    if (colNum === 1) colTwo.push(col);
+    if (colNum === 2) colThree.push(col);
+  };
+
+  //get diagonal positions of player
+  const getDiagonalOne = (rowNum, colNum, arr) => {
+    if (rowNum === colNum) {
+      diagOne.push(arr[colNum]);
+    }
+  };
+
+  const getDiagonalTwo = (rowNum, colNum, arr) => {
+    if (rowNum === 0 && colNum == arr.length - (rowNum + 1))
+      diagTwo.push(arr[colNum]);
+    else if (rowNum === 1 && colNum == arr.length - (rowNum + 1))
+      diagTwo.push(arr[colNum]);
+    else if (rowNum === 2 && colNum == arr.length - (rowNum + 1))
+      diagTwo.push(arr[colNum]);
+  };
+  for (let rowNum in board) {
+    rowNum = +rowNum;
+    // check rows
+    if (isPlayerWinner(board[rowNum])) {
+      winner = board[0][0];
+      break;
+    } else {
+      board[rowNum].forEach((player, colNum, arr) => {
+        getCol(player, colNum);
+        getDiagonalOne(rowNum, colNum, arr);
+        getDiagonalTwo(rowNum, colNum, arr);
+      });
+
+      // check columns
+      if (isPlayerWinner(colOne)) winner = colOne[0];
+      else if (isPlayerWinner(colTwo)) winner = colTwo[0];
+      else if (isPlayerWinner(colThree)) winner = colThree[0];
+      // check diagonals
+      else if (isPlayerWinner(diagOne)) winner = diagOne[0];
+      else if (isPlayerWinner(diagTwo)) winner = diagTwo[0];
+      else winner = null;
+    }
+  }
+  return winner;
 };

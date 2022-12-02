@@ -76,31 +76,31 @@ describe("getScreentimeAlertList", () => {
   });
 });
 
-xdescribe("hexToRGB", () => {
+describe("hexToRGB", () => {
   test("returns hex code converted into an RGB code", () => {
     expect(hexToRGB("#FF1133")).toBe("rgb(255,17,51)");
-    expect(hexToRGB("#f6e58d")).toBe("rgb(246, 229, 141)");
-    expect(hexToRGB("#6ab04c")).toBe("rgb(106, 176, 76)");
-    expect(hexToRGB("#4834d4")).toBe("rgb(72, 52, 212)");
+    expect(hexToRGB("#6F3C66")).toBe("rgb(111,60,102)");
+    expect(hexToRGB("#6FFF2F")).toBe("rgb(111,255,47)");
+    expect(hexToRGB("#37FFFF")).toBe("rgb(55,255,255)");
   });
 });
 
-xdescribe("findWinner", () => {
-  test("returns the sum of all its digits", () => {
+describe("findWinner", () => {
+  test("return X if player X has won, 0 if the player 0 has won, and null if there is currently no winner", () => {
     expect(
       findWinner([
         ["X", "0", null],
         ["X", null, "0"],
         ["X", null, "0"],
       ])
-    ).toBe("X");
+    ).toEqual("X");
     expect(
       findWinner([
         ["X", "0", null],
         ["0", "X", "0"],
         ["0", null, "X"],
       ])
-    ).toBe("X");
+    ).toEqual("X");
 
     expect(
       findWinner([
@@ -108,13 +108,20 @@ xdescribe("findWinner", () => {
         ["0", "0", "X"],
         [null, "0", "X"],
       ])
-    ).toBe("0");
+    ).toEqual("0");
     expect(
       findWinner([
         ["X", "0", "X"],
         ["0", "0", "X"],
         ["X", "X", "0"],
       ])
-    ).toBe(null);
+    ).toEqual(null);
+    expect(
+      findWinner([
+        ["X", "X", "X"],
+        ["0", null, null],
+        [null, null, "0"],
+      ])
+    ).toEqual("X");
   });
 });
