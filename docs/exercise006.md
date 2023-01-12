@@ -8,6 +8,8 @@ First, watch the following video:
 
 [Writing your own Unit Tests](https://storage.googleapis.com/tech-returners-course/JavaScript_Challenges/unit_testing.mp4)
 
-Then, work through the exercises in a TDD (Test Driven Development) approach of Red -> Green -> Refactor
+Then, work through the exercises in a TDD (Test Driven Development) approach of Red -> Green -> Refactor.
+
+⚠️ Be careful to ensure your test cases cover a range of possible eventualities! For example, if you just test the numbers `2`, `3` and `4` for `isPrime` can you be sure that your function is actually correct?
 
 You've nearly finished these exercises now. 🔥 For the final ones see: [Exercises 007 - Docs](./exercise007.md)
