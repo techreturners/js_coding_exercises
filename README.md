@@ -18,21 +18,25 @@ Remember to break down problems to help you solve them and that Google is your f
 
 To complete these challenges you will need to have Node.js installed on your computer. Follow this link and click on the green button to install for Mac or Windows: https://nodejs.org/en/download/
 
+👉 We recommend using the most recent LTS (Long-Term Support) version of Node.
+
 A download will start. When a pop-up appears please follow the installation instructions.
 
 To check you have installed Node.js correctly, go to your terminal and type:
 
     node --version
 
-Your terminal should respond with the version of Node you have installed. It will look something similar to the following (dont worry if its not the exact same version):
+Your terminal should respond with the version of Node you have installed. It will look something similar to the following:
 
     v18.12.1
+
+🔍 Don't worry if you don't see the exact same version of Node. However, we recommend you use _at least_ Node v18 during this programme, which is the current LTS (long-term supported) version (as of Jan 2023).
 
 Once you've got Node installed you can make a start - before you do please make sure to watch the [getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4) as it walks you through instructions for getting started and the first exercise.
 
 #### [Getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4)
 
-### 💻 Completing the challenges 
+### 💻 Completing the challenges
 
 After forking this repository (as shown in the video) you will need to then clone the repo locally and install its dependencies:
 
@@ -49,18 +53,18 @@ To run the tests, run
 Work through each test 1 by 1 until you have them all passing. Initially, you'll have a lot of failing tests and a lot of output on the console. To focus on a single test, add `.only` to the test you are interested in:
 
 ```javascript
-describe("capitalize", () => {
-  test.only("returns a capitalized word", () => {
-    expect(capitalize("hello")).toBe("Hello");
-  });
+describe('capitalize', () => {
+	test.only('returns a capitalized word', () => {
+		expect(capitalize('hello')).toBe('Hello');
+	});
 
-  test("does nothing if the word is already capitalized", () => {
-    expect(capitalize("Hello")).toBe("Hello");
-  });
+	test('does nothing if the word is already capitalized', () => {
+		expect(capitalize('Hello')).toBe('Hello');
+	});
 
-  test("capitalizes the first word of a sentence", () => {
-    expect(capitalize("the quick fox")).toBe("The quick fox");
-  });
+	test('capitalizes the first word of a sentence', () => {
+		expect(capitalize('the quick fox')).toBe('The quick fox');
+	});
 });
 ```
 
@@ -69,18 +73,18 @@ Don't forget to remove it afterwards so you can run all your tests again.
 You can also ignore tests momentarily by adding an `x` at the front:
 
 ```javascript
-xdescribe("capitalize", () => {
-  test("returns a capitalized word", () => {
-    expect(capitalize("hello")).toBe("Hello");
-  });
+xdescribe('capitalize', () => {
+	test('returns a capitalized word', () => {
+		expect(capitalize('hello')).toBe('Hello');
+	});
 
-  test("does nothing if the word is already capitalized", () => {
-    expect(capitalize("Hello")).toBe("Hello");
-  });
+	test('does nothing if the word is already capitalized', () => {
+		expect(capitalize('Hello')).toBe('Hello');
+	});
 
-  test("capitalizes the first word of a sentence", () => {
-    expect(capitalize("the quick fox")).toBe("The quick fox");
-  });
+	test('capitalizes the first word of a sentence', () => {
+		expect(capitalize('the quick fox')).toBe('The quick fox');
+	});
 });
 ```
 
