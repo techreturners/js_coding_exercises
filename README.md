@@ -1,14 +1,14 @@
 # ✨ JavaScript Practice ✨
 
-This repository contains 8 sets of exercises for you to undertake, helping you to build on your coding and technical ability. We will be checking over your solutions, so please ensure you push to GitHub regularly.
+This repository contains 8 sets of exercises which will help you to build your ability and confidence with JavaScript. Completing all 8 sets would be ideal, but please ensure you complete at least the first 6.
 
-You may find these exercises challenging but they give you the opportunity to showcase your Growth Mindset and commitment to programming and learning in general. You can always come to us if you are having any trouble! 😊
+We will be checking over your solutions, so please ensure you `commit` after solving each problem, and don't forget to `push` to GitHub regularly.
 
-We will be covering Javascript on the Your Return to Tech course, so it's really important your problem solving skills are fresh.
+You may find these exercises challenging but they give you the opportunity to showcase your Growth Mindset and commitment to programming and learning. You can always come to us if you are having any trouble! 😊
 
 If you need reminding of any key Javascript concepts to solve these challenges we recommend the 'Codecademy: Learn Javascript' (free) course: https://www.codecademy.com/learn/introduction-to-javascript
 
-NOTE: You are not required to purchase any PRO content from CodeAcademy.
+NOTE: You are not required to purchase any PRO content from codecademy.
 
 We also recommend this visual guide if you are unfamiliar with GitHub: https://agripongit.vincenttunru.com/
 
@@ -30,27 +30,37 @@ Your terminal should respond with the version of Node you have installed. It wil
 
     v18.12.1
 
-🔍 Don't worry if you don't see the exact same version of Node. However, we recommend you use _at least_ Node v18 during this programme, which is the current LTS (long-term supported) version (as of Jan 2023).
+🔍 Don't worry if you don't see the exact same version of Node. However, we recommend you use Node v20 during this programme, which is the current LTS (long-term supported) version (as of May 2023).
 
 Once you've got Node installed you can make a start - before you do please make sure to watch the [getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4) as it walks you through instructions for getting started and the first exercise.
 
 #### [Getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4)
 
+The short version is that you must:
+
+👉 Use the Github website to `fork` the repository into your account.
+
+👉 Use the `git clone` command _on the forked repository in your account_ to make a local copy of the repository on your computer.
+
+👉 Install the dependencies in your local copy using `npm install`
+
+👉 Complete the challenges.
+
+👉 Use `git add`, `git commit` and `git push` to upload your work to the forked repository on your github account.
+
 ### 💻 Completing the challenges
 
-After forking this repository (as shown in the video) you will need to then clone the repo locally and install its dependencies:
+👉 Next, look inside the **challenges** directory.
 
-    npm install
+📗 Each JavaScript file in the **challenges** has an accompanying explanation in the **docs** folder, which includes handy tips and information to expand your learning.
 
-If you look inside the **challenges** directory you will find a file of functions to implement.
+🕵️ The first five JavaScript files have a corresponding file in the **tests** folder. After Exercise 005 you have to write your own tests too! 🥳
 
-To understand how these functions work, take a look in the corresponding test file where the desired functionality is described and read the accompanying "docs" provided. The doc files include handy tips and information to expand your learning.
-
-To run the tests, run
+Your task is to make every test pass for each file. To run the tests, use the command:
 
     npm test
 
-Work through each test 1 by 1 until you have them all passing. Initially, you'll have a lot of failing tests and a lot of output on the console. To focus on a single test, add `.only` to the test you are interested in:
+Work through each test one by one until you have them all passing. Initially, you'll have a lot of failing tests and a lot of output on the console. To focus on a single test, you can add `.only` to the test you are interested in:
 
 ```javascript
 describe('capitalize', () => {
@@ -68,7 +78,7 @@ describe('capitalize', () => {
 });
 ```
 
-Don't forget to remove it afterwards so you can run all your tests again.
+⚠️ Don't forget to remove `.only` afterwards so you can run all your tests again.
 
 You can also ignore tests momentarily by adding an `x` at the front:
 
@@ -88,11 +98,11 @@ xdescribe('capitalize', () => {
 });
 ```
 
-To run **ONE** test file at a time you can enter into the terminal npm test followed by the file extension:
+⚠️ But make sure when you push remotely to github that you have re-enabled all the tests!
 
-    npm test exercise004.test.js
+Lastly, to run **ONE** test file at a time you can use the command `npm test` followed by the path to the file:
 
-But make sure when you push remotely to github that you have re-enabled all the test files!
+    npm test test/exercise004.test.js
 
 ### 🔎 Edge cases
 
@@ -116,17 +126,19 @@ What if the string contains no characters?
 
 `capitalize("") --> ""`
 
+👉 Try adding extra tests to cover possibilities that the existing tests miss!
+
 ### 🧹 Linting
 
-To help you write "clean", tidy code, we've included Linting with [EsLint](https://eslint.org/) in this repository.
+To help you write "clean", tidy code, we've included Linting with [Eslint](https://eslint.org/) in this repository.
 
-EsLint will tell you when you have incorrectly formatted your code, or when it suspects an error such as an undefined variable.
+Eslint will tell you when it suspects an error such as an undefined variable, or other common problems.
 
 This is hugely beneficial, as it alerts you to many errors before you even run your code! It also helps you write code that will be easy for you and other developers to read in the future.
 
 It is configured with a set of standard rules, which can be viewed [here](https://eslint.org/docs/rules/).
 
-For reporting as-you-type, install and enable the EsLint extension for VSCode (click the square symbol on the left hand bar for extensions).
+For reporting as-you-type, install and enable the eslint extension for VSCode (click the square symbol on the left hand bar for extensions).
 
 To check all linting errors, run:
 
@@ -134,6 +146,6 @@ To check all linting errors, run:
 
 You should fix any errors before adding and commiting your code.
 
-# 🔥 The challenges 🔥
+# 🔥 The first challenge 🔥
 
 Open [the first challenge instructions](docs/exercise001.md) to get started! 🙌

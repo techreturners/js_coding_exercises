@@ -1,4 +1,4 @@
-# Exercises 007
+# Exercises 007 🤵
 
 Well done for getting this far! 🎉 🥳
 
@@ -12,6 +12,4 @@ Work through the exercises in a TDD (Test Driven Development) approach of Red ->
 
 In these exercises you have covered forLoops, ES6 methods like `.map()` and `.forEach()`, eslint, Test Driven Development and more!
 
-Great work, we hope you found these exercises fun and look forward to seeing you soon. 🙌
-
-See [Exercise008](./exercise008-bonus-activity.md) for an optional Bonus activity!
+Lastly, see [Exercise008](./exercise008.md) for one final activity.

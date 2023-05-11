@@ -22,7 +22,7 @@ ES6 arrow functions provide an alternative syntax for creating functions. In ES6
 
 ```javascript
 function add(a, b) {
-  return a + b;
+	return a + b;
 }
 
 add(10, 9);
@@ -30,7 +30,7 @@ add(10, 9);
 
 ```javascript
 const add = (a, b) => {
-  return a + b;
+	return a + b;
 };
 
 add(10, 9);
@@ -46,7 +46,7 @@ Arrow functions allow us to shorten the syntax and do a one-line return statemen
 
 ```javascript
 const add = (a, b) => {
-  return a + b;
+	return a + b;
 };
 ```
 
@@ -66,7 +66,7 @@ For example:
 
 ```javascript
 const isEven = (a) => {
-  return a % 2 === 0;
+	return a % 2 === 0;
 };
 ```
 
@@ -74,7 +74,7 @@ Can be re-written as:
 
 ```javascript
 const isEven = (a) => {
-  return a % 2 === 0;
+	return a % 2 === 0;
 };
 ```
 
@@ -83,7 +83,5 @@ And with implicit return as well:
 ```javascript
 const isEven = (a) => a % 2 === 0;
 ```
-
-We love ES6 arrow functions and hope you do too! 💜
 
 See here for: [Exercises 006 - Docs](./exercise006.md)
