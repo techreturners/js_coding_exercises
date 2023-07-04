@@ -25,11 +25,18 @@ export function generateInitials(firstName, lastName) {
   return `${firstName[0].toUpperCase()}.${lastName[0].toUpperCase()}`;
 }
 
-// export function addVAT(originalPrice, vatRate) {
-//   if (originalPrice === undefined) throw new Error("originalPrice is requied");
-//   if (vatRate === undefined) throw new Error("vatRate is required");
-//   // Add your code here!
-// }
+export function addVAT(originalPrice, vatRate) {
+  if (originalPrice === undefined) throw new Error("originalPrice is requied");
+  if (vatRate === undefined) throw new Error("vatRate is required");
+  // Add your code here!
+  const sum = (originalPrice / 100) * vatRate;
+
+  if (Number.isInteger(originalPrice + sum)) {
+    return originalPrice + sum;
+  } else {
+    return Number((originalPrice + sum).toFixed(2));
+  }
+}
 
 // export function getSalePrice(originalPrice, reduction) {
 // 	if (originalPrice === undefined)
