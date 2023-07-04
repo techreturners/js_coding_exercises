@@ -38,20 +38,26 @@
 //   }
 // }
 
-export function getSalePrice(originalPrice, reduction) {
-  if (originalPrice === undefined) throw new Error("originalPrice is required");
-  if (reduction === undefined) throw new Error("reduction is required");
-  // Add your code here!
-  const sub = (originalPrice / 100) * reduction;
-  return Number.isInteger(originalPrice - sub)
-    ? originalPrice - sub
-    : Number((originalPrice - sub).toFixed(2));
-}
-
-// export function getMiddleCharacter(str) {
-// 	if (str === undefined) throw new Error('str is required');
-// 	// Add your code here!
+// export function getSalePrice(originalPrice, reduction) {
+//   if (originalPrice === undefined) throw new Error("originalPrice is required");
+//   if (reduction === undefined) throw new Error("reduction is required");
+//   // Add your code here!
+//   const sub = (originalPrice / 100) * reduction;
+//   return Number.isInteger(originalPrice - sub)
+//     ? originalPrice - sub
+//     : Number((originalPrice - sub).toFixed(2));
 // }
+
+export function getMiddleCharacter(str) {
+  if (str === undefined) throw new Error("str is required");
+  // Add your code here!
+  const strSplitted = str.split("");
+  const evenIndex = strSplitted.length / 2;
+  const oddIndex = (strSplitted.length - 1) / 2;
+  return strSplitted.length % 2 === 0
+    ? `${str[evenIndex - 1]}${str[evenIndex]}`
+    : `${str[oddIndex]}`;
+}
 
 // export function reverseWord(word) {
 // 	if (word === undefined) throw new Error('word is required');
