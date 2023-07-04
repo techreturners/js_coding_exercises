@@ -59,17 +59,21 @@
 //     : `${str[oddIndex]}`;
 // }
 
-export function reverseWord(word) {
-  if (word === undefined) throw new Error("word is required");
-  // Add your code here!
-  const reversedWord = word.split("");
-  return reversedWord.reverse().join("");
-}
-
-// export function reverseAllWords(words) {
-// 	if (words === undefined) throw new Error('words is required');
-// 	// Add your code here!
+// export function reverseWord(word) {
+//   if (word === undefined) throw new Error("word is required");
+//   // Add your code here!
+//   const reversedWord = word.split("");
+//   return reversedWord.reverse().join("");
 // }
+
+export function reverseAllWords(words) {
+  if (words === undefined) throw new Error("words is required");
+  // Add your code here!
+  const reversedWords = words.map((word) => {
+    return word.split("").reverse().join("");
+  });
+  return reversedWords;
+}
 
 // export function countLinuxUsers(users) {
 // 	if (users === undefined) throw new Error('users is required');
