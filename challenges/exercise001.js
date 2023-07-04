@@ -75,22 +75,30 @@
 //   return reversedWords;
 // }
 
-export function countLinuxUsers(users) {
-  if (users === undefined) throw new Error("users is required");
-  // Add your code here!
-  let counter = 0;
-  users.map((user) => {
-    if (user.type === "Linux") {
-      counter = counter + 1;
-    }
-  });
-  return counter;
-}
-
-// export function getMeanScore(scores) {
-//   if (scores === undefined) throw new Error("scores is required");
+// export function countLinuxUsers(users) {
+//   if (users === undefined) throw new Error("users is required");
 //   // Add your code here!
+//   let counter = 0;
+//   users.map((user) => {
+//     if (user.type === "Linux") {
+//       counter = counter + 1;
+//     }
+//   });
+//   return counter;
 // }
+
+export function getMeanScore(scores) {
+  if (scores === undefined) throw new Error("scores is required");
+  // Add your code here!
+  let sum = 0;
+  scores.map((score) => {
+    sum = sum + score;
+  });
+
+  return Number.isInteger(sum / scores.length)
+    ? sum / scores.length
+    : Number((sum / scores.length).toFixed(2));
+}
 
 // export function simpleFizzBuzz(n) {
 //   if (n === undefined) throw new Error("n is required");
