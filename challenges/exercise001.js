@@ -87,20 +87,32 @@
 //   return counter;
 // }
 
-export function getMeanScore(scores) {
-  if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
-  let sum = 0;
-  scores.map((score) => {
-    sum = sum + score;
-  });
-
-  return Number.isInteger(sum / scores.length)
-    ? sum / scores.length
-    : Number((sum / scores.length).toFixed(2));
-}
-
-// export function simpleFizzBuzz(n) {
-//   if (n === undefined) throw new Error("n is required");
+// export function getMeanScore(scores) {
+//   if (scores === undefined) throw new Error("scores is required");
 //   // Add your code here!
+//   let sum = 0;
+//   scores.map((score) => {
+//     sum = sum + score;
+//   });
+
+//   return Number.isInteger(sum / scores.length)
+//     ? sum / scores.length
+//     : Number((sum / scores.length).toFixed(2));
 // }
+
+export function simpleFizzBuzz(n) {
+  if (n === undefined) throw new Error("n is required");
+  // Add your code here!
+  if (n % 3 === 0 && n % 5 !== 0) {
+    return "fizz";
+  }
+  if (n % 5 === 0 && n % 3 !== 0) {
+    return "buzz";
+  }
+  if (n % 3 === 0 && n % 5 == 0) {
+    return "fizzbuzz";
+  }
+  if (n % 3 !== 0 && n % 5 !== 0) {
+    return n;
+  }
+}
