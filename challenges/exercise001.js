@@ -18,17 +18,17 @@ export function capitalize(word) {
   return upperCase.join("");
 }
 
-// export function generateInitials(firstName, lastName) {
-// 	if (firstName === undefined) throw new Error('firstName is required');
-// 	if (lastName === undefined) throw new Error('lastName is required');
-// 	// Add your code here!
-// }
+export function generateInitials(firstName, lastName) {
+  if (firstName === undefined) throw new Error("firstName is required");
+  if (lastName === undefined) throw new Error("lastName is required");
+  // Add your code here!
+  return `${firstName[0].toUpperCase()}.${lastName[0].toUpperCase()}`;
+}
 
 // export function addVAT(originalPrice, vatRate) {
-// 	if (originalPrice === undefined)
-// 		throw new Error('originalPrice is requied');
-// 	if (vatRate === undefined) throw new Error('vatRate is required');
-// 	// Add your code here!
+//   if (originalPrice === undefined) throw new Error("originalPrice is requied");
+//   if (vatRate === undefined) throw new Error("vatRate is required");
+//   // Add your code here!
 // }
 
 // export function getSalePrice(originalPrice, reduction) {
