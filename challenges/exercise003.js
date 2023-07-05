@@ -19,6 +19,17 @@ export function camelCaseWords(words) {
 export function getTotalSubjects(people) {
   if (people === undefined) throw new Error("people is required");
   // Your code here!
+  let subjectsCounter = 0;
+  const subjectsNumber = people.map((people) => {
+    const { subjects } = people;
+    return subjects.length;
+  });
+
+  for (let i = 0; i < subjectsNumber.length; i++) {
+    subjectsCounter = subjectsCounter + subjectsNumber[i];
+  }
+
+  return subjectsCounter;
 }
 
 export function checkIngredients(menu, ingredient) {
