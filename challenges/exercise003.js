@@ -36,6 +36,20 @@ export function checkIngredients(menu, ingredient) {
   if (menu === undefined) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
+  let isIncluded = false;
+  const menus = menu.map((menu) => {
+    const { ingredients } = menu;
+    return ingredients;
+  });
+
+  for (let i = 0; i < menus.flat().length; i++) {
+    if (menus.flat()[i] === ingredient) {
+      isIncluded = true;
+      break;
+    }
+  }
+
+  return isIncluded;
 }
 
 export function duplicateNumbers(arr1, arr2) {
