@@ -56,4 +56,28 @@ export function duplicateNumbers(arr1, arr2) {
   if (arr1 === undefined) throw new Error("arr1 is required");
   if (arr2 === undefined) throw new Error("arr2 is required");
   // Your code here!
+
+  const duplicates = [];
+  if (arr1 > arr2) {
+    for (let i = 0; i < arr2.length; i++) {
+      for (let j = 0; j < arr1.length; j++) {
+        if (arr2[i] === arr1[j]) {
+          duplicates.push(arr2[i]);
+        }
+      }
+    }
+  } else {
+    for (let i = 0; i < arr1.length; i++) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1[i] === arr2[j]) {
+          duplicates.push(arr1[i]);
+        }
+      }
+    }
+  }
+  const uniqueArray = duplicates.filter((item, index) => {
+    return duplicates.indexOf(item) == index;
+  });
+
+  return uniqueArray.sort();
 }
