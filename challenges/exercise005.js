@@ -79,14 +79,14 @@ export const getWordFrequencies = (str) => {
 
   const strSplitted = str.replace(/[^a-zA-Z0-9 ]/g, "").split(" ");
   let stringsCounter = {};
-  let test = 0;
+  let stringCounter = 0;
   for (let i = 0; i < strSplitted.length; i++) {
-    test = strSplitted.filter(
+    stringCounter = strSplitted.filter(
       (str) => str.toLowerCase() === strSplitted[i].toLowerCase()
     ).length;
     stringsCounter = {
       ...stringsCounter,
-      [strSplitted[i].toLowerCase()]: test,
+      [strSplitted[i].toLowerCase()]: stringCounter,
     };
   }
 
