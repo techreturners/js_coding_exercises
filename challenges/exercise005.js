@@ -42,7 +42,17 @@ export const sumArrays = (arrs) => {
 
 export const arrShift = (arr) => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+  //   Your code here!
+  let arrCopy = arr;
+  const firstElement = arrCopy[0];
+  const lastElement = arrCopy[arrCopy.length - 1];
+  if (arr.length > 1) {
+    arrCopy.splice(0, 1, lastElement);
+    arrCopy.splice(arrCopy.length - 1, 1, firstElement);
+  } else {
+    arrCopy = arr;
+  }
+  return arrCopy;
 };
 
 export const findNeedle = (haystack, searchTerm) => {
