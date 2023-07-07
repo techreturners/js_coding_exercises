@@ -10,6 +10,17 @@ export const findNextNumber = (nums, n) => {
 export const count1sand0s = (str) => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
+  let counterNumber1 = 0;
+  let counterNumber0 = 0;
+  for (let i = 0; i <= str.split("").length; i++) {
+    if (str[i] === "1") {
+      counterNumber1 = counterNumber1 + 1;
+    } else if (str[i] === "0") {
+      counterNumber0 = counterNumber0 + 1;
+    }
+  }
+
+  return { 0: counterNumber0, 1: counterNumber1 };
 };
 
 export const reverseNumber = (n) => {
