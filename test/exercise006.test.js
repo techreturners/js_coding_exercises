@@ -3,6 +3,8 @@ import {
   isValidDNA,
   getComplementaryDNA,
   isItPrime,
+  createMatrix,
+  areWeCovered,
 } from "../challenges/exercise006";
 
 describe("sumMultiples", () => {
@@ -46,5 +48,15 @@ describe("isItPrime", () => {
   test("returns false if a number is not prime.", () => {
     expect(isItPrime(4)).toBe(false);
     expect(isItPrime(1)).toBe(false);
+  });
+});
+
+describe("createMatrix", () => {
+  test("returns an array filled with any items", () => {
+    expect(createMatrix(3, "foo")).toEqual([
+      ["foo", "foo", "foo"],
+      ["foo", "foo", "foo"],
+      ["foo", "foo", "foo"],
+    ]);
   });
 });
