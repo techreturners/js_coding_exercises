@@ -2,6 +2,7 @@ import {
   sumMultiples,
   isValidDNA,
   getComplementaryDNA,
+  isItPrime,
 } from "../challenges/exercise006";
 
 describe("sumMultiples", () => {
@@ -34,5 +35,16 @@ describe("getComplementaryDNA", () => {
   });
   test("returns a complementary DNA string of ACTG", () => {
     expect(getComplementaryDNA("ACTG")).toBe("TGAC");
+  });
+});
+
+describe("isItPrime", () => {
+  test("returns true if a number is prime.", () => {
+    expect(isItPrime(7)).toBe(true);
+    expect(isItPrime(2)).toBe(true);
+  });
+  test("returns false if a number is not prime.", () => {
+    expect(isItPrime(4)).toBe(false);
+    expect(isItPrime(1)).toBe(false);
   });
 });
