@@ -64,12 +64,20 @@ export const getComplementaryDNA = (str) => {
 };
 
 /**
- * This function should receive a number and return true/false depending on whether it is a prime number or not. A prime number is a number that can only be divided evenly by 1 and itself (for example, 7)
+ * This function should receive a number and return true/false depending on whether it is a prime number or not.
+ * A prime number is a number that can only be divided evenly by 1 and itself (for example, 7)
  * @param {Number} n
  * @returns {Boolean}
  */
 export const isItPrime = (n) => {
   if (n === undefined) throw new Error("n is required");
+  if (n === 1) {
+    return false;
+  } else if (n === 2) {
+    return true;
+  } else {
+    return n % 2 !== 0;
+  }
 };
 
 /**
