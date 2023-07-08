@@ -1,4 +1,8 @@
-import { sumMultiples, isValidDNA } from "../challenges/exercise006";
+import {
+  sumMultiples,
+  isValidDNA,
+  getComplementaryDNA,
+} from "../challenges/exercise006";
 
 describe("sumMultiples", () => {
   test("returns the sum of the any multiple of 3 or 5 inside an array ", () => {
@@ -21,5 +25,14 @@ describe("isValidDNA", () => {
   });
   test("returns false if the string not contain the valid DNA character", () => {
     expect(isValidDNA("x")).toBe(false);
+  });
+});
+
+describe("getComplementaryDNA", () => {
+  test("returns a complementary DNA string of TGAC.", () => {
+    expect(getComplementaryDNA("TGAC")).toBe("ACTG");
+  });
+  test("returns a complementary DNA string of ACTG", () => {
+    expect(getComplementaryDNA("ACTG")).toBe("TGAC");
   });
 });
