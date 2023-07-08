@@ -60,3 +60,30 @@ describe("createMatrix", () => {
     ]);
   });
 });
+
+describe("areWeCovered", () => {
+  test("returns true if there's at least 3 members of the staff with the same week day", () => {
+    const staff = [
+      { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
+      {
+        name: "Pedro",
+        rota: ["Monday", "Tuesday", "Wednesday", "Saturday", "Sunday"],
+      },
+      { name: "Marlon", rota: ["Monday", "Tuesday", "Wednesday", "Saturday"] },
+    ];
+    const day = "Monday";
+    expect(areWeCovered(staff, day)).toBe(true);
+  });
+  test("returns false if there's less than 3 members of the staff with the same week day", () => {
+    const staff = [
+      { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
+      {
+        name: "Pedro",
+        rota: ["Tuesday", "Wednesday", "Saturday", "Sunday"],
+      },
+      { name: "Marlon", rota: ["Monday", "Tuesday", "Wednesday", "Saturday"] },
+    ];
+    const day = "Monday";
+    expect(areWeCovered(staff, day)).toBe(false);
+  });
+});
