@@ -23,16 +23,21 @@ export const sumMultiples = (arr) => {
 };
 
 /**
- * This function will receive a string of characters and should return true/false depending on whether it is a valid DNA string. A valid DNA string may contain characters C, G, T or A only.
+ * This function will receive a string of characters and should return true/false
+ * depending on whether it is a valid DNA string. A valid DNA string may contain characters C, G, T or A only.
  * @param {String} str
  * @returns {Boolean}
  */
 export const isValidDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  const letters = "CGTA";
+  return letters.includes(str);
 };
 
 /**
- * This function will receive a valid DNA string (see above) and should return a string of the complementary base pairs. In DNA, T always pairs with A, and C always pairs with G. So a string of "ACTG" would have a complementary DNA string of "TGAC".
+ * This function will receive a valid DNA string (see above) and should return a string of the complementary base pairs.
+ * In DNA, T always pairs with A, and C always pairs with G.
+ * So a string of "ACTG" would have a complementary DNA string of "TGAC".
  * @param {String} str
  * @returns {String}
  */
