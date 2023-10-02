@@ -30,7 +30,7 @@ Your terminal should respond with the version of Node you have installed. It wil
 
     v18.12.1
 
-🔍 Don't worry if you don't see the exact same version of Node. However, we recommend you use Node v20 during this programme, which is the current LTS (long-term supported) version (as of May 2023).
+🔍 Don't worry if you don't see the exact same version of Node 18. However, we recommend you use Node 18.x.x during this programme, as it is the current LTS (long-term supported) version as of Oct 2023.
 
 Once you've got Node installed you can make a start - before you do please make sure to watch the [getting started video](https://storage.googleapis.com/your-return-to-tech/assessment-centre/assessment_exercises_guidance.mp4) as it walks you through instructions for getting started and the first exercise.
 
@@ -130,21 +130,22 @@ What if the string contains no characters?
 
 ### 🧹 Linting
 
-To help you write "clean", tidy code, we've included Linting with [Eslint](https://eslint.org/) in this repository.
+To help you write "clean", tidy code, we've included some rules for [Eslint](https://eslint.org/) in the `.eslintrc` file in this repository.
 
-Eslint will tell you when it suspects an error such as an undefined variable, or other common problems.
-
-This is hugely beneficial, as it alerts you to many errors before you even run your code! It also helps you write code that will be easy for you and other developers to read in the future.
+Eslint helps by spotting common errors such as undefined variables. This is hugely beneficial, as it alerts you to many errors before you even run your code! It also helps you write code that will be easy for you and other developers to read in the future.
 
 It is configured with a set of standard rules, which can be viewed [here](https://eslint.org/docs/rules/).
 
-For reporting as-you-type, install and enable the eslint extension for VSCode (click the square symbol on the left hand bar for extensions).
+For reporting as-you-type, install and enable the eslint extension for VSCode. To do this:
 
-To check all linting errors, run:
+1. Click the square symbol on the left hand bar for extensions
+2. Search for "eslint" and click install
 
-    npm run eslint
+Alternatively, you can manually run eslint by running this command in the root folder of this repository on your machine:
 
-You should fix any errors before adding and commiting your code.
+    npx eslint ./
+
+If there is no output then `eslint` has found no errors 🥳 If there are errors, you should fix them before committing your code.
 
 # 🔥 The first challenge 🔥
 
