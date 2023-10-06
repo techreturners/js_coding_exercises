@@ -20,7 +20,8 @@ export function addVAT(originalPrice, vatRate) {
 	if (originalPrice === undefined)
 		throw new Error('originalPrice is requied');
 	if (vatRate === undefined) throw new Error('vatRate is required');
-	// Add your code here!
+	
+	return originalPrice * ((vatRate / 100) + 1)
 }
 
 export function getSalePrice(originalPrice, reduction) {
