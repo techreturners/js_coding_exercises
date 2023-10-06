@@ -66,12 +66,34 @@ export function reverseWord(word) {
 
 export function reverseAllWords(words) {
 	if (words === undefined) throw new Error('words is required');
-	// Add your code here!
+	
+	let reversedArray = [];
+
+	words.forEach(word => {
+		let reversed = "";
+
+		for(let i = word.length - 1; i >= 0; i--) {
+		reversed += word[i];
+		}
+
+		reversedArray.push(reversed);
+	})
+
+	return reversedArray;
 }
 
 export function countLinuxUsers(users) {
 	if (users === undefined) throw new Error('users is required');
-	// Add your code here!
+	
+	let linuxUsersCount = 0;
+
+	users.forEach(user => {
+		if (user.type == "Linux") {
+			linuxUsersCount++;
+		}
+	})
+
+	return linuxUsersCount;
 }
 
 export function getMeanScore(scores) {
