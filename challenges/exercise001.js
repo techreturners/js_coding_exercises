@@ -22,7 +22,13 @@ export function addVAT(originalPrice, vatRate) {
 		throw new Error('originalPrice is requied');
 	if (vatRate === undefined) throw new Error('vatRate is required');
 	
-	return originalPrice * ((vatRate / 100) + 1);
+	let finalPrice = originalPrice * ((vatRate / 100) + 1);
+
+	if (finalPrice % 1 == 0) {
+		return finalPrice;
+	} else {
+		return finalPrice.toFixed(2);
+	}
 }
 
 export function getSalePrice(originalPrice, reduction) {
