@@ -103,7 +103,13 @@ export function getMeanScore(scores) {
 
 	scores.forEach(score => totalScore+= score);
 
-	return (totalScore / scores.length).toFixed(2);
+	let average = totalScore / scores.length;
+
+	if (average % 1 == 0) {
+		return average;
+	} else {
+		return average.toFixed(2);
+	}
 }
 
 export function simpleFizzBuzz(n) {
