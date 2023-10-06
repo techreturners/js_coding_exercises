@@ -57,14 +57,10 @@ export function reverseWord(word) {
 	
 	let reversed = "";
 
-	console.log("reversed before loop = " + reversed);
-
 	for(let i = word.length - 1; i >= 0; i--) {
 		reversed += word[i];
-		console.log("reversed during loop = " + reversed);
 	}
 
-	console.log("reversed after loop = " + reversed);
 	return reversed;
 }
 
