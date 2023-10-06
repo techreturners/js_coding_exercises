@@ -6,6 +6,7 @@
 
 export function capitalize(word) {
 	if (word === undefined) throw new Error('word is required');
+	
 	return word[0].toUpperCase() + word.substring(1);
 }
 
@@ -21,7 +22,7 @@ export function addVAT(originalPrice, vatRate) {
 		throw new Error('originalPrice is requied');
 	if (vatRate === undefined) throw new Error('vatRate is required');
 	
-	return originalPrice * ((vatRate / 100) + 1)
+	return originalPrice * ((vatRate / 100) + 1);
 }
 
 export function getSalePrice(originalPrice, reduction) {
@@ -32,7 +33,7 @@ export function getSalePrice(originalPrice, reduction) {
 	if(reduction == 0) {
 		return originalPrice;
 	}
-	
+
 	return originalPrice * (reduction / 100);
 }
 
