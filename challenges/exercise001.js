@@ -14,7 +14,7 @@ export function generateInitials(firstName, lastName) {
 	if (firstName === undefined) throw new Error('firstName is required');
 	if (lastName === undefined) throw new Error('lastName is required');
 	
-	return firstName[0] + "." + lastName[0];
+	return `${firstName[0]}.${lastName[0]}`;
 }
 
 export function addVAT(originalPrice, vatRate) {
@@ -35,10 +35,6 @@ export function getSalePrice(originalPrice, reduction) {
 	if (originalPrice === undefined)
 		throw new Error('originalPrice is required');
 	if (reduction === undefined) throw new Error('reduction is required');
-	
-	if(reduction === 0) {
-		return originalPrice;
-	}
 
 	const salePrice =originalPrice - (originalPrice * (reduction / 100));
 
