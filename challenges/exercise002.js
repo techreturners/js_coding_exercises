@@ -40,5 +40,9 @@ export function countSheep(arr) {
 
 export function hasMPostCode(person) {
 	if (person === undefined) throw new Error('person is required');
-	// Your code here!
+	
+	const hasM = person.address.postCode[0].toLowerCase() === 'm';;
+	const isManchester = person.address.city.toLowerCase() === 'manchester';
+
+	return hasM && isManchester;
 }
