@@ -12,7 +12,16 @@ export function isFromManchester(person) {
 
 export function getBusNumbers(people) {
 	if (people === undefined) throw new Error('people is required');
-	// Your code here!
+	
+	let requiredBuses = 0;
+
+	while(people > 0) {
+		people -= 40;
+
+		requiredBuses++;
+	}
+	
+	return requiredBuses;
 }
 
 export function countSheep(arr) {
