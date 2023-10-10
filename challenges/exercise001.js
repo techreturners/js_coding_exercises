@@ -27,7 +27,7 @@ export function addVAT(originalPrice, vatRate) {
 	if (finalPrice % 1 == 0) {
 		return finalPrice;
 	} else {
-		return finalPrice.toFixed(2);
+		return parseFloat(finalPrice.toFixed(2));
 	}
 }
 
@@ -116,7 +116,7 @@ export function getMeanScore(scores) {
 	if (average % 1 == 0) {
 		return average;
 	} else {
-		return average.toFixed(2);
+		return parseFloat(average.toFixed(2));
 	}
 }
 
