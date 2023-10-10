@@ -37,7 +37,7 @@ export function checkIngredients(menu, ingredient) {
 	if (!ingredient) throw new Error('ingredient is required');
 
 	let hasIngredient = false;
-	
+
 	menu.forEach(item => {
 		if (item.ingredients.includes(ingredient)) {
 			hasIngredient = true;
@@ -50,5 +50,20 @@ export function checkIngredients(menu, ingredient) {
 export function duplicateNumbers(arr1, arr2) {
 	if (arr1 === undefined) throw new Error('arr1 is required');
 	if (arr2 === undefined) throw new Error('arr2 is required');
-	// Your code here!
+	
+	const duplicates = [];
+  
+	for (const num of arr1) {
+		if (arr2.includes(num) && !duplicates.includes(num)) {
+			duplicates.push(num);
+		}
+	}
+
+	for (const num of arr2) {
+		if (arr1.includes(num) && !duplicates.includes(num)) {
+			duplicates.push(num);
+		}
+	}
+
+	return duplicates.sort((a, b) => a - b);;
 }
